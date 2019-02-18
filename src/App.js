@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import BootstrapNavBar from './BootstrapNavBar'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import One from './One';
+import Two from './Two';
+import Three from './Three';
+import Four from './Four';
+import Home from './Home';
 
 var atlImages = [
   'http://i.huffpost.com/gen/1716876/images/o-ATLANTA-TRAFFIC-facebook.jpg',
@@ -11,12 +17,18 @@ var atlImages = [
 class App extends Component {
   render() {
     return (
-      <div>
-        <BootstrapNavBar />
-        <div className="container main">
-          <h1>Main App</h1>
+      <Router>
+        <div>
+          <BootstrapNavBar />
+          <div className="container" style={{marginTop:60}}>
+            <Route exact path="/" component={Home} />
+            <Route path="/1" component={One} />
+            <Route path="/2" component={Two} />
+            <Route path="/3" component={Three} />
+            <Route path="/4" component={Four} />
+          </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }
