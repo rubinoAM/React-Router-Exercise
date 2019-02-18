@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 import BootstrapNavBar from './BootstrapNavBar'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+
+//Pages
 import One from './One';
 import Two from './Two';
 import Three from './Three';
 import Four from './Four';
 import Home from './Home';
+import About from './About';
 
 var atlImages = [
   'http://i.huffpost.com/gen/1716876/images/o-ATLANTA-TRAFFIC-facebook.jpg',
@@ -21,7 +24,10 @@ class App extends Component {
         <div>
           <BootstrapNavBar />
           <div className="container" style={{marginTop:60}}>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" render={()=>{
+              return(<Home images={atlImages} />)
+            }} />
+            <Route path="/about" component={About} />
             <Route path="/1" component={One} />
             <Route path="/2" component={Two} />
             <Route path="/3" component={Three} />
