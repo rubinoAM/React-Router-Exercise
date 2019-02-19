@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <BootstrapNavBar />
+          <Route path="/" component={BootstrapNavBar} />
           <div className="container" style={{marginTop:60}}>
             <Route exact path="/" render={()=>{
               return(<Home images={atlImages} />)

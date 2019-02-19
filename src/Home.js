@@ -9,7 +9,7 @@ function Home(props){
 	console.log(images);
 
 	return (
-		<div>
+		<div className="home">
 			<h1>A page about Atlanta!</h1>
 			{images}
 		</div>

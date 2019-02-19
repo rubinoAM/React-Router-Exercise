@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 class BootstrapNavBar extends Component{
   render(){
@@ -13,10 +13,8 @@ class BootstrapNavBar extends Component{
 		    <ul className="nav navbar-nav">
 		    	<li><Link to="/">Home</Link></li>
 					<li><Link to="/about">About</Link></li>
-					<li><Link to="/one">One</Link></li>
-					<li><Link to="/two">Two</Link></li>
-					<li><Link to="/three">Three</Link></li>
-					<li><Link to="/four">Four</Link></li>
+					<li><Link to="/mayormessage">Mayor Message</Link></li>
+					<li><Link to="/weather">Weather</Link></li>
 		    </ul>
 		  </div>
 		</nav>    
